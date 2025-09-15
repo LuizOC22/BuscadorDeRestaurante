@@ -18,9 +18,9 @@ public class RestauranteController {
     @GetMapping("/restaurantes")
     public List<String> listarRestaurantes() {
         return Arrays.asList(
-                " Restaurante Japonês ",
-                " Hamburgueria ",
-                " Pizzaria "
+                "🍣 Restaurante Japonês A",
+                "🍔 Hamburgueria B",
+                "🍕 Pizzaria C"
         );
     }
 }
