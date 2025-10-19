@@ -1,11 +1,13 @@
 package com.example.BuscadorDeRestaurantes.controller;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import java.util.Arrays;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 public class RestauranteController {
 
     // Rota simples de teste
@@ -14,15 +16,4 @@ public class RestauranteController {
         return "Backend funcionando 🚀";
     }
 
-    // Rota para listar restaurantes fictícios
-    @GetMapping("/restaurantes")
-    public List<String> listarRestaurantes() {
-        return Arrays.asList(
-                " Restaurante Japonês ",
-                " Hamburgueria ",
-                " Pizzaria ",
-                " Pastelaria",
-                " Tai Food"
-        );
-    }
 }
